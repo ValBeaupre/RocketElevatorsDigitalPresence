@@ -1,11 +1,9 @@
-
-$(document).ready(function () {
+$(document).ready(function() {
   var hash = window.location.hash;
 
   $(hash).addClass("show active");
   $(hash + "-tab-button").addClass("show active");
 });
-
 
 /* 
 $(document).ready(function() {
@@ -25,7 +23,6 @@ $(document).ready(function() {
     $("#residential-tab-button").addClass("show active");
   } 
 } */
-
 
 /* function resQuote() {
   var nbApart = parseInt($("#resNbApartments").val()) || 0;
@@ -48,48 +45,39 @@ $(document).ready(function() {
   }
   */
 
+function resQuote() {
+  var div =
+    Number(document.getElementById("resNbApartments").value) /
+    Number(document.getElementById("resNbFloors").value);
 
- function resQuote() {
-   
-   var div =
-     Number(document.getElementById("resNbApartments").value) /
-     Number(document.getElementById("resNbFloors").value);
- 
-   /* Division = Elevators  */
-   var elvtrs = Math.ceil(div / 6);
- 
-   /* Multipl = double */
-   var mult = elvtrs * 2;
+  /* Division = Elevators  */
+  var elvtrs = Math.ceil(div / 6);
 
-   var resFloors = document.getElementById("resNbFloors").value
-   var resBsmtFloors = document.getElementById("resNbBsmtFloors").value
-   var double;
- 
-   if ((resFloors + resBsmtFloors) > 20) {
-     double = mult;
-   } else {
-     double = elvtrs;
-   }
- 
-   document.getElementById("resElev").value = double;
- }
-  
- 
- function commQuote() {
+  /* Multipl = double */
+  var mult = elvtrs * 2;
 
-  Number(document.getElementById("commNbElevShafts").value) = Number(document.getElementById('commNbElevReq').value);
+  var resFloors = document.getElementById("resNbFloors").value;
+  var resBsmtFloors = document.getElementById("resNbBsmtFloors").value;
+  var double;
 
- }
+  if (resFloors + resBsmtFloors > 20) {
+    double = mult;
+  } else {
+    double = elvtrs;
+  }
 
- function corpQuote() {
+  document.getElementById("resElev").value = double;
+}
 
-  Number(document.getElementById("corpNbTenants").value) * (Number(document.getElementById("corpNbFloors").value) + Number(document.getElementById("corpNbBsmtFloors").value));
+function commQuote() {
+  console.log("Toto"); //parseInt($("#commNbElevShafts")
+}
 
-
- }
-
-
-
+function corpQuote() {
+  Number(document.getElementById("corpNbOccupants").value) *
+    (Number(document.getElementById("corpNbFloors").value) +
+      Number(document.getElementById("corpNbBsmtFloors").value));
+}
 
 /*   if (
     $("#resNbAppartments").val() && $("#resNbFloors").val() && $("#resNbBsmtFloors").val()
@@ -129,6 +117,3 @@ $(document).ready(function() {
 
 function commQuote() {
     var nbTenants = parseInt($("comNbTenants").val()) || 0; */
-
-
-
