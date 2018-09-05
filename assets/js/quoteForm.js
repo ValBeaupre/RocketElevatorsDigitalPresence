@@ -39,6 +39,23 @@ function resQuote() {
 function commQuote() {
   var shafts = document.getElementById("commNbElevShafts").value;
   document.getElementById("commNbElevReq").value = shafts;
+
+  var rdoStd = document.getElementById("commStandard").checked;
+  var rdoPrem = document.getElementById("commPremium").checked;
+  var rdoExc = document.getElementById("commExcelium").checked;
+  var resCommStd = shafts * 7565 * 1.1;
+  var resCommPrem = shafts * 12345 * 1.13;
+  var resCommExc = shafts * 15400 * 1.16;
+
+  if (rdoStd === true) {
+    $("#commPrice").val(Math.ceil(resCommStd));
+  }
+  if (rdoPrem === true) {
+    $("#commPrice").val(Math.ceil(resCommPrem));
+  }
+  if (rdoExc === true) {
+    $("#commPrice").val(Math.ceil(resCommExc));
+  }
 }
 
 function corpQuote() {
