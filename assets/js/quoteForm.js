@@ -43,18 +43,18 @@ function commQuote() {
   var rdoStd = document.getElementById("commStandard").checked;
   var rdoPrem = document.getElementById("commPremium").checked;
   var rdoExc = document.getElementById("commExcelium").checked;
-  var resCommStd = shafts * 7565 * 1.1;
-  var resCommPrem = shafts * 12345 * 1.13;
-  var resCommExc = shafts * 15400 * 1.16;
+  var commPriceStd = shafts * 7565 * 1.1;
+  var commPricePrem = shafts * 12345 * 1.13;
+  var commPriceExc = shafts * 15400 * 1.16;
 
   if (rdoStd === true) {
-    $("#commPrice").val(Math.ceil(resCommStd));
+    $("#commPrice").val(Math.ceil(commPriceStd));
   }
   if (rdoPrem === true) {
-    $("#commPrice").val(Math.ceil(resCommPrem));
+    $("#commPrice").val(Math.ceil(commPricePrem));
   }
   if (rdoExc === true) {
-    $("#commPrice").val(Math.ceil(resCommExc));
+    $("#commPrice").val(Math.ceil(commPriceExc));
   }
 }
 
@@ -74,18 +74,18 @@ function corpQuote() {
   var rdoStd = document.getElementById("corpStandard").checked;
   var rdoPrem = document.getElementById("corpPremium").checked;
   var rdoExc = document.getElementById("corpExcelium").checked;
-  var resCorpStd = shafts * 7565 * 1.1;
-  var resCorpPrem = shafts * 12345 * 1.13;
-  var resCorpExc = shafts * 15400 * 1.16;
+  var corpPriceStd = shafts * 7565 * 1.1;
+  var corpPricePrem = shafts * 12345 * 1.13;
+  var corpPriceExc = shafts * 15400 * 1.16;
 
   if (rdoStd === true) {
-    $("#corpPrice").val(Math.ceil(resCorpStd));
+    $("#corpPrice").val(Math.ceil(corpPriceStd));
   }
   if (rdoPrem === true) {
-    $("#corpPrice").val(Math.ceil(resCorpPrem));
+    $("#corpPrice").val(Math.ceil(corpPricePrem));
   }
   if (rdoExc === true) {
-    $("#corpPrice").val(Math.ceil(resCorpExc));
+    $("#corpPrice").val(Math.ceil(corpPriceExc));
   }
 }
 
@@ -97,24 +97,25 @@ function hybQuote() {
   var totalOccup = occup * building;
   var elvtrs = Math.ceil(totalOccup / 1000);
   var shafts = Math.ceil(building / 20);
-  var elevReq = Math.ceil(elvtrs / shafts);
+  var elevShafts = Math.ceil(elvtrs / shafts);
+  var elevReq = shafts * elevShafts;
 
   document.getElementById("hybNbElevReq").value = elevReq;
 
   var rdoStd = document.getElementById("hybStandard").checked;
   var rdoPrem = document.getElementById("hybPremium").checked;
   var rdoExc = document.getElementById("hybExcelium").checked;
-  var resHybpStd = shafts * 7565 * 1.1;
-  var resHybPrem = shafts * 12345 * 1.13;
-  var resHybExc = shafts * 15400 * 1.16;
+  var hybPriceStd = shafts * 7565 * 1.1;
+  var hybPricePrem = shafts * 12345 * 1.13;
+  var hybPriceExc = shafts * 15400 * 1.16;
 
   if (rdoStd === true) {
-    $("#corpPrice").val(Math.ceil(resCorpStd));
+    $("#hybPrice").val(Math.ceil(hybPriceStd));
   }
   if (rdoPrem === true) {
-    $("#corpPrice").val(Math.ceil(resCorpPrem));
+    $("#hybPrice").val(Math.ceil(hybPricePrem));
   }
   if (rdoExc === true) {
-    $("#corpPrice").val(Math.ceil(resCorpExc));
+    $("#hybPrice").val(Math.ceil(hybPriceExc));
   }
 }
