@@ -128,8 +128,8 @@
 										SERVICES
 									</a>
 									<ul class="dropdown-menu">
-										<li><a href="_REResidential.html">Residential</a></li>
-										<li><a href="_RECommercial.html">Commercial</a></li>
+										<li><a href="residential.html">Residential</a></li>
+										<li><a href="commercial.html">Commercial</a></li>
 									</ul>
 								</li>
 								<li>
@@ -253,19 +253,9 @@
 								<hr>
 
 								<div class="col-md-14 text-center">
-									<label>Estimated Price</label>
+									<label>Estimated Price in $</label>
 									<input id="resPrice" type="number" readonly>
 								</div>
-
-
-								<!--<div class="row">
-									<div class="col-md-12">
-										<button type="submit" class="btn btn-3d btn-blue btn-xlg btn-block mt-30">
-											SEND APPLICATION
-											<!-<span class="block font-lato">We'll get back to you within 48 hours</span>  ->
-										</button>
-									</div>
-								</div>  -->
 
 							</fieldset>
 
@@ -347,7 +337,7 @@
 								<hr>
 
 								<div class="col-md-14 text-center">
-									<label>Estimated Price</label>
+									<label>Estimated Price in $</label>
 									<input id="commPrice" type="number" readonly>
 								</div>
 
@@ -427,7 +417,7 @@
 								<hr>
 
 								<div class="col-md-14 text-center">
-									<label>Estimated Price</label>
+									<label>Estimated Price in $</label>
 									<input id="corpPrice" type="number" readonly>
 								</div>
 
@@ -476,9 +466,9 @@
 										 onchange="hybQuote()" onclick="hybQuote()" oninput="hybQuote()">
 									</div>
 									<div class="col-md-4 col-sm-6">
-										<label>How Many Activity Hours In The Building (Maximum 24) *</label>
+										<label>How Many Activity Hours In The Building (Max 24) *</label>
 										<input id="hybNbActHours" type="number" name="contact[hyb_act_hours]" max="24" min="0" value="" class="form-control required"
-										 onkeyup="hybQuote()" onchange="hybQuote()" onclick="hybQuote()" oninput="hybQuote()">
+										 onkeyup="verifHours()" onchange="verifHours()" onclick="verifHours()" oninput="verifHours()">
 									</div>
 								</div>
 
@@ -511,7 +501,7 @@
 								<hr>
 
 								<div class="col-md-14 text-center">
-									<label>Estimated Price</label>
+									<label>Estimated Price in $</label>
 									<input id="hybPrice" type="number" readonly>
 								</div>
 
@@ -615,92 +605,3 @@
 </body>
 
 </html>
-
-
-<!-- Notes
-
-------------------------------------------------------------------------------
-
-<!- textarea ->
-<div class="fancy-form">
-	<textarea rows="5" class="form-control word-count" data-maxlength="200" data-info="textarea-words-info" placeholder="Fancy Textarea..."></textarea>
-
-	<i class="fa fa-comments">
-		<!- icon -></i>
-
-	<span class="fancy-hint size-11 text-muted">
-		<strong>Hint:</strong> 200 words allowed!
-		<span class="pull-right">
-			<span id="textarea-words-info">0/200</span> Words
-		</span>
-	</span>
-
-</div>
-
-
-<!- input ->
-<div class="fancy-form">
-	<i class="fa fa-user"></i>
-
-	<input type="tel" class="form-control" placeholder="Fancy Input + Dedicated Tooltip">
-
-	<!- tooltip - optional, bootstrap tooltip can be used instead ->
-	<span class="fancy-tooltip top-left">
-		<!- positions: .top-left | .top-right ->
-		<em>I am a tooltip!</em>
-	</span>
-</div>
-
-
-<!- select ->
-<div class="fancy-form fancy-form-select">
-	<select class="form-control">
-		<option value="">--- Fancy Select ---</option>
-		<option value="1">Option 1</option>
-		<option value="2">option 2</option>
-		<option value="3">option 3</option>
-	</select>
-
-	<!-
-		.fancy-arrow
-		.fancy-arrow-double
-	->
-	<i class="fancy-arrow"></i>
-</div>
-
-
-<!- select2 ->
-<div class="fancy-form fancy-form-select">
-	<select class="form-control select2">
-		<option value="">--- Select 2 ---</option>
-		<option value="1">Option 1</option>
-		<option value="2">option 2</option>
-		<option value="3">option 3</option>
-	</select>
-
-	<!-
-		.fancy-arrow
-		.fancy-arrow-double
-	->
-	<i class="fancy-arrow-"></i>
-</div>
-
-
-<!- radio ->
-<label class="radio">
-	<input type="radio" name="radio-btn" value="1" checked="checked">
-	<i></i> Radio 1
-</label>
-
-
-<!- classic select2 ->
-<select class="form-control select2">
-	<option value="">--- Select 2 ---</option>
-	<option value="1">Option 1</option>
-	<option value="2">option 2</option>
-	<option value="3">option 3</option>
-</select>
-
-
-<!- stepper ->
-<input type="text" value="2" min="0" max="1000" class="form-control stepper">  -->

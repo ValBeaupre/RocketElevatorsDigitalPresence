@@ -119,3 +119,17 @@ function hybQuote() {
     $("#hybPrice").val(Math.ceil(hybPriceExc));
   }
 }
+
+function verifHours() {
+  var hours = document.getElementById("hybNbActHours");
+
+  if (hours.value > 24) {
+    hours.value = 24;
+  }
+
+  if (hours.value < 0) {
+    hours = 0;
+  }
+
+  hybQuote();
+}
