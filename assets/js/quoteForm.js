@@ -6,6 +6,7 @@ $(document).ready(function() {
 });
 
 function resQuote() {
+  var resFloors = Number(document.getElementById("resNbFloors").value);
   var div =
     Number(document.getElementById("resNbApartments").value) /
     Number(document.getElementById("resNbFloors").value);
@@ -13,20 +14,26 @@ function resQuote() {
   /* Division = Elevators  */
   var elvtrs = Math.ceil(div / 6);
 
-  /* Multipl = double */
-  var mult = elvtrs * 2;
+  elvtrs *= Math.ceil(resFloors / 20);
 
-  var resFloors = document.getElementById("resNbFloors").value;
-  var resBsmtFloors = document.getElementById("resNbBsmtFloors").value;
-  var double;
+  document.getElementById("resElev").value = elvtrs;
 
-  if (resFloors + resBsmtFloors > 20) {
-    double = mult;
-  } else {
-    double = elvtrs;
+  var rdoStd = document.getElementById("resStandard").checked;
+  var rdoPrem = document.getElementById("resPremium").checked;
+  var rdoExc = document.getElementById("resExcelium").checked;
+  var resPriceStd = elvtrs * 7565 * 1.1;
+  var resPricePrem = elvtrs * 12345 * 1.13;
+  var resPriceExc = elvtrs * 15400 * 1.16;
+
+  if (rdoStd === true) {
+    $("#resPrice").val(Math.ceil(resPriceStd));
   }
-
-  document.getElementById("resElev").value = double;
+  if (rdoPrem === true) {
+    $("#resPrice").val(Math.ceil(resPricePrem));
+  }
+  if (rdoExc === true) {
+    $("#resPrice").val(Math.ceil(resPriceExc));
+  }
 }
 
 function commQuote() {
