@@ -26,13 +26,13 @@ function resQuote() {
   var resPriceExc = elvtrs * 15400 * 1.16;
 
   if (rdoStd === true) {
-    $("#resPrice").val(Math.ceil(resPriceStd));
+    $("#resPrice").val(resPriceStd.toFixed(2));
   }
   if (rdoPrem === true) {
-    $("#resPrice").val(Math.ceil(resPricePrem));
+    $("#resPrice").val(resPricePrem.toFixed(2));
   }
   if (rdoExc === true) {
-    $("#resPrice").val(Math.ceil(resPriceExc));
+    $("#resPrice").val(resPriceExc.toFixed(2));
   }
 }
 
@@ -48,13 +48,13 @@ function commQuote() {
   var commPriceExc = shafts * 15400 * 1.16;
 
   if (rdoStd === true) {
-    $("#commPrice").val(Math.ceil(commPriceStd));
+    $("#commPrice").val(commPriceStd.toFixed(2));
   }
   if (rdoPrem === true) {
-    $("#commPrice").val(Math.ceil(commPricePrem));
+    $("#commPrice").val(commPricePrem.toFixed(2));
   }
   if (rdoExc === true) {
-    $("#commPrice").val(Math.ceil(commPriceExc));
+    $("#commPrice").val(commPriceExc.toFixed(2));
   }
 }
 
@@ -79,13 +79,13 @@ function corpQuote() {
   var corpPriceExc = shafts * 15400 * 1.16;
 
   if (rdoStd === true) {
-    $("#corpPrice").val(Math.ceil(corpPriceStd));
+    $("#corpPrice").val(corpPriceStd.toFixed(2));
   }
   if (rdoPrem === true) {
-    $("#corpPrice").val(Math.ceil(corpPricePrem));
+    $("#corpPrice").val(corpPricePrem.toFixed(2));
   }
   if (rdoExc === true) {
-    $("#corpPrice").val(Math.ceil(corpPriceExc));
+    $("#corpPrice").val(corpPriceExc.toFixed(2));
   }
 }
 
@@ -110,13 +110,13 @@ function hybQuote() {
   var hybPriceExc = shafts * 15400 * 1.16;
 
   if (rdoStd === true) {
-    $("#hybPrice").val(Math.ceil(hybPriceStd));
+    $("#hybPrice").val(hybPriceStd.toFixed(2));
   }
   if (rdoPrem === true) {
-    $("#hybPrice").val(Math.ceil(hybPricePrem));
+    $("#hybPrice").val(hybPricePrem.toFixed(2));
   }
   if (rdoExc === true) {
-    $("#hybPrice").val(Math.ceil(hybPriceExc));
+    $("#hybPrice").val(hybPriceExc.toFixed(2));
   }
 }
 
