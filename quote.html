@@ -209,19 +209,16 @@
 								<div class="row">
 									<div class="col-md-4 col-sm-6">
 										<label>How Many Apartments *</label>
-										<input id="resNbApartments" type="number" name="contact[res_app]" class="form-control required" onkeyup="resQuote()" onchange="resQuote()"
-										 onclick="resQuote()" oninput="resQuote()">
+										<input id="resNbApartments" type="number" name="contact[res_app]" class="form-control required" required onkeyup="resQuote()">
 									</div>
 									<div class="col-md-4 col-sm-6">
 										<label>How Many Floors *</label>
-										<input id="resNbFloors" type="number" name="contact[res_floors]" class="form-control required" onkeyup="resQuote()" onchange="resQuote()"
-										 onclick="resQuote()" oninput="resQuote()">
+										<input id="resNbFloors" type="number" name="contact[res_floors]" class="form-control required" required onkeyup="resQuote()">
 
 									</div>
 									<div class="col-md-4 col-sm-6">
 										<label>How Many Basement Floors *</label>
-										<input id="resNbBsmtFloors" type="number" name="contact[res_bsmt_floors]" class="form-control required" onkeyup="resQuote()"
-										 onchange="resQuote()" onclick="resQuote()" oninput="resQuote()">
+										<input id="resNbBsmtFloors" type="number" name="contact[res_bsmt_floors]" class="form-control required" required onkeyup="resQuote()">
 									</div>
 								</div>
 
@@ -229,7 +226,7 @@
 
 								<div class="col-md-14 text-center">
 									<label>Number Of Elevators Required</label>
-									<input id="resElev" type="number" readonly>
+									<input id="resElev" class="elevators" type="number" readonly disabled>
 								</div>
 
 								<hr>
@@ -254,7 +251,7 @@
 
 								<div class="col-md-14 text-center">
 									<label>Estimated Price in $</label>
-									<input id="resPrice" type="number" class="price" readonly>
+									<input id="resPrice" type="number" class="price" readonly disabled>
 								</div>
 
 							</fieldset>
@@ -278,33 +275,31 @@
 								<div class="row">
 									<div class="col-md-4 col-sm-6">
 										<label>How Many Distinct Tenants *</label>
-										<input id="commNbTenants" type="number" name="contact[comm_tenants]" class="form-control required" onkeyup="commQuote()"
+										<input id="commNbTenants" type="number" name="contact[comm_tenants]" class="form-control required" required onkeyup="commQuote()"
 										 onchange="commQuote()" onclick="commQuote()" oninput="commQuote()">
 
 									</div>
 									<div class="col-md-4 col-sm-6">
 										<label>How Many Floors *</label>
-										<input id="commNbFloors" type="number" name="contact[comm_floors]" class="form-control required" onkeyup="commQuote()" onchange="commQuote()"
-										 onclick="commQuote()" oninput="commQuote()">
+										<input id="commNbFloors" type="number" name="contact[comm_floors]" class="form-control required" required onkeyup="commQuote()"
+										 onchange="commQuote()" onclick="commQuote()" oninput="commQuote()">
 
 									</div>
 									<div class="col-md-4 col-sm-6">
 										<label>How Many Basement Floors *</label>
-										<input id="commNbBsmtFloors" type="number" name="contact[comm_bsmt_floors]" class="form-control required" onkeyup="commQuote()"
+										<input id="commNbBsmtFloors" type="number" name="contact[comm_bsmt_floors]" class="form-control required" required onkeyup="commQuote()"
 										 onchange="commQuote()" onclick="commQuote()" oninput="commQuote()">
 
 									</div>
 									<div class="col-md-4 col-sm-6">
 										<label>How Many Parking Spaces *</label>
-										<input id="commNbPrkgSpaces" type="number" name="contact[comm_prkg_spaces]" class="form-control required" onkeyup="commQuote()"
+										<input id="commNbPrkgSpaces" type="number" name="contact[comm_prkg_spaces]" class="form-control required" required onkeyup="commQuote()"
 										 onchange="commQuote()" onclick="commQuote()" oninput="commQuote()">
 
 									</div>
 									<div class="col-md-4 col-sm-6">
 										<label>How Many Elevator Shafts *</label>
-										<input id="commNbElevShafts" type="number" name="contact[comm_elev_shafts]" class="form-control required" onkeyup="commQuote()"
-										 onchange="commQuote()" onclick="commQuote()" oninput="commQuote()">
-
+										<input id="commNbElevShafts" type="number" name="contact[comm_elev_shafts]" class="form-control required" required onkeyup="commQuote()">
 									</div>
 								</div>
 
@@ -312,7 +307,7 @@
 
 								<div class="col-md-14 text-center">
 									<label>Number Of Elevators Required</label>
-									<input id="commNbElevReq" type="number" readonly>
+									<input id="commNbElevReq" class="elevators" type="number" readonly disabled>
 								</div>
 
 								<hr>
@@ -337,7 +332,7 @@
 
 								<div class="col-md-14 text-center">
 									<label>Estimated Price in $</label>
-									<input id="commPrice" type="number" class="price" readonly>
+									<input id="commPrice" type="number" class="price" readonly disabled>
 								</div>
 
 							</fieldset>
@@ -361,28 +356,28 @@
 								<div class="row">
 									<div class="col-md-4 col-sm-6">
 										<label>How Many Business Distinct Tenants *</label>
-										<input id="corpNbTenants" type="number" name="contact[corp_tenants]" class="form-control required" onkeyup="corpQuote()"
+										<input id="corpNbTenants" type="number" name="contact[corp_tenants]" class="form-control required" required onkeyup="corpQuote()"
 										 onchange="corpQuote()" onclick="corpQuote()" oninput="corpQuote()">
 
 									</div>
 									<div class="col-md-4 col-sm-6">
 										<label>How Many Floors *</label>
-										<input id="corpNbFloors" type="number" name="contact[corp_floors]" class="form-control required" onkeyup="corpQuote()" onchange="corpQuote()"
-										 onclick="corpQuote()" oninput="corpQuote()">
+										<input id="corpNbFloors" type="number" name="contact[corp_floors]" class="form-control required" required onkeyup="corpQuote()"
+										 onchange="corpQuote()" onclick="corpQuote()" oninput="corpQuote()">
 									</div>
 									<div class="col-md-4 col-sm-6">
 										<label>How Many Basement Floors *</label>
-										<input id="corpNbBsmtFloors" type="number" name="contact[corp_bsmt_floors]" class="form-control required" onkeyup="corpQuote()"
+										<input id="corpNbBsmtFloors" type="number" name="contact[corp_bsmt_floors]" class="form-control required" required onkeyup="corpQuote()"
 										 onchange="corpQuote()" onclick="corpQuote()" oninput="corpQuote()">
 									</div>
 									<div class="col-md-4 col-sm-6">
 										<label>How Many Parking Spaces *</label>
-										<input id="corpNbPrkgSpcaces" type="number" name="contact[corp_prkg_spaces]" class="form-control required" onkeyup="corpQuote()"
+										<input id="corpNbPrkgSpcaces" type="number" name="contact[corp_prkg_spaces]" class="form-control required" required onkeyup="corpQuote()"
 										 onchange="corpQuote()" onclick="corpQuote()" oninput="corpQuote()">
 									</div>
 									<div class="col-md-4 col-sm-6">
 										<label>How Many Occupants Per Floor Maximum *</label>
-										<input id="corpNbOccupants" type="number" name="contact[corp_occupants]" class="form-control required" onkeyup="corpQuote()"
+										<input id="corpNbOccupants" type="number" name="contact[corp_occupants]" class="form-control required" required onkeyup="corpQuote()"
 										 onchange="corpQuote()" onclick="corpQuote()" oninput="corpQuote()">
 									</div>
 								</div>
@@ -391,7 +386,7 @@
 
 								<div class="col-md-14 text-center">
 									<label>Number Of Elevators Required</label>
-									<input id="corpNbElevReq" type="number" readonly>
+									<input id="corpNbElevReq" class="elevators" type="number" readonly disabled>
 								</div>
 
 								<hr>
@@ -416,7 +411,7 @@
 
 								<div class="col-md-14 text-center">
 									<label>Estimated Price in $</label>
-									<input id="corpPrice" type="number" class="price" readonly>
+									<input id="corpPrice" type="text" class="number" readonly disabled>
 								</div>
 
 							</fieldset>
@@ -439,33 +434,33 @@
 								<div class="row">
 									<div class="col-md-4 col-sm-6">
 										<label>How Many Distincts Tenants *</label>
-										<input id="hybNbTenants" type="number" name="contact[hyb_tenants]" class="form-control required" onkeyup="hybQuote()" onchange="hybQuote()"
-										 onclick="hybQuote()" oninput="hybQuote()">
+										<input id="hybNbTenants" type="number" name="contact[hyb_tenants]" class="form-control required" required onkeyup="hybQuote()"
+										 onchange="hybQuote()" onclick="hybQuote()" oninput="hybQuote()">
 									</div>
 									<div class="col-md-4 col-sm-6">
 										<label>How Many Floors *</label>
-										<input id="hybNbFloors" type="number" name="contact[hyb_floors]" class="form-control required" onkeyup="hybQuote()" onchange="hybQuote()"
-										 onclick="hybQuote()" oninput="hybQuote()">
+										<input id="hybNbFloors" type="number" name="contact[hyb_floors]" class="form-control required" required onkeyup="hybQuote()"
+										 onchange="hybQuote()" onclick="hybQuote()" oninput="hybQuote()">
 									</div>
 									<div class="col-md-4 col-sm-6">
 										<label>How Many Basement Floors *</label>
-										<input id="hybNbBsmtFloors" type="number" name="contact[hyb_bsmt_floors]" class="form-control required" onkeyup="hybQuote()"
+										<input id="hybNbBsmtFloors" type="number" name="contact[hyb_bsmt_floors]" class="form-control required" required onkeyup="hybQuote()"
 										 onchange="hybQuote()" onclick="hybQuote()" oninput="hybQuote()">
 									</div>
 									<div class="col-md-4 col-sm-6">
 										<label>How Many Parking Spaces *</label>
-										<input id="hybNbPrkgSpaces" type="number" name="contact[hyb_prkg_spaces]" class="form-control required" onkeyup="hybQuote()"
+										<input id="hybNbPrkgSpaces" type="number" name="contact[hyb_prkg_spaces]" class="form-control required" required onkeyup="hybQuote()"
 										 onchange="hybQuote()" onclick="hybQuote()" oninput="hybQuote()">
 									</div>
 									<div class="col-md-4 col-sm-6">
 										<label>How Many Occupants Per Level Maximum *</label>
-										<input id="hybNbOccupants" type="number" name="contact[hyb_occupants]" class="form-control required" onkeyup="hybQuote()"
+										<input id="hybNbOccupants" type="number" name="contact[hyb_occupants]" class="form-control required" required onkeyup="hybQuote()"
 										 onchange="hybQuote()" onclick="hybQuote()" oninput="hybQuote()">
 									</div>
 									<div class="col-md-4 col-sm-6">
 										<label>How Many Activity Hours In The Building (Max 24) *</label>
-										<input id="hybNbActHours" type="number" name="contact[hyb_act_hours]" max="24" min="0" class="form-control required" onkeyup="verifHours()"
-										 onchange="verifHours()" onclick="verifHours()" oninput="verifHours()">
+										<input id="hybNbActHours" type="number" name="contact[hyb_act_hours]" max="24" min="0" class="form-control required" required
+										 onkeyup="verifHours()" onchange="verifHours()" onclick="verifHours()" oninput="verifHours()">
 									</div>
 								</div>
 
@@ -473,7 +468,7 @@
 
 								<div class="col-md-14 text-center">
 									<label>Number Of Elevators Required</label>
-									<input id="hybNbElevReq" type="number" readonly>
+									<input id="hybNbElevReq" class="elevators" type="number" readonly disabled>
 								</div>
 
 								<hr>
@@ -499,7 +494,7 @@
 
 								<div class="col-md-14 text-center">
 									<label>Estimated Price in $</label>
-									<input id="hybPrice" type="number" class="price" readonly>
+									<input id="hybPrice" type="text" class="number" readonly disabled>
 								</div>
 
 							</fieldset>

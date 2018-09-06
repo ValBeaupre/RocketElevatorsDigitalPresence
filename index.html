@@ -1250,52 +1250,51 @@
 						</div><!-- /Alert Mandatory -->
 
 
-						<form method="post" enctype="multipart/form-data">
+						<form id="sendMessage">
 							<fieldset>
 								<input type="hidden" name="action" value="contact_send" />
 
 								<div class="row">
 									<div class="col-md-4">
 										<label for="contact:name">Full Name *</label>
-										<input required type="text" value="" class="form-control" name="contact[name][required]" id="contact:name">
+										<input required type="text" class="form-control" name="contact[name][required]" required id="contact:name">
 									</div>
 									<div class="col-md-4">
 										<label for="contact:business">Business Name *</label>
-										<input type="text" value="" class="form-control" name="contact[business][required]" id="contact:business">
+										<input type="text" class="form-control" name="contact[business][required]" required id="contact:business">
 									</div>
 									<div class="col-md-4">
 										<label for="contact:email">E-mail Address *</label>
-										<input required type="email" value="" class="form-control" name="contact[email][required]" id="contact:email">
+										<input required type="email" class="form-control" name="contact[email][required]" required id="contact:email">
 									</div>
 									<div class="col-md-4">
 										<label for="contact:phone">Phone *</label>
-										<input type="text" value="" class="form-control" name="contact[phone][required]" id="contact:phone">
+										<input type="text" class="form-control" name="contact[phone][required]" required id="contact:phone">
 									</div>
 									<div class="col-md-8">
 										<label for="contact:project">Project Name *</label>
-										<input type="text" value="" class="form-control" name="contact[project][required]" id="contact:project">
+										<input type="text" class="form-control" name="contact[project][required]" required id="contact:project">
 									</div>
 
 								</div>
 								<div class="row">
 									<div class="col-md-8">
 										<label for="contact:subject">Description *</label>
-										<input required type="text" value="" class="form-control" name="contact[description][required]" id="contact:description">
+										<input required type="text" value="" class="form-control" name="contact[description][required]" required id="contact:description">
 									</div>
 									<div class="col-md-4">
 										<label for="contact_department">Department *</label>
-										<select class="form-control pointer" name="contact[department][required]">
+										<select class="form-control pointer" name="contact[department][required]" required>
 											<option value="">--- Select ---</option>
 											<option value="Residential">Residential</option>
 											<option value="Commercial">Commercial</option>
-											<!--	<option value="Architecture">Architecture</option>  -->
 										</select>
 									</div>
 								</div>
 								<div class="row">
 									<div class="col-md-12">
 										<label for="contact:message">Message *</label>
-										<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message][required]" id="contact:message"></textarea>
+										<textarea required maxlength="10000" rows="8" class="form-control" name="contact[message][required]" required id="contact:message"></textarea>
 									</div>
 								</div>
 								<div class="row">
@@ -1350,7 +1349,7 @@
 							<span class="block"><strong><i class="fa fa-map-marker"></i> Address:</strong> 725 Boulevard Lebourneuf, Quebec City,
 								Canada, G2J 0C4</span>
 							<span class="block"><strong><i class="fa fa-phone"></i> Phone:</strong> <a href="tel:1-418-580-7055">418-580-7055</a></span>
-							<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="info@codeboxx.biz">info@rocketelevators.com</a></span>
+							<span class="block"><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="info@codeboxx.biz">info@codeboxx.biz</a></span>
 						</p>
 
 					</div>
@@ -1445,6 +1444,7 @@
 	<!-- JAVASCRIPT FILES -->
 	<script>var plugin_path = 'assets/plugins/';</script>
 	<script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
+	<script src="assets/js/quoteForm.js"></script>
 
 	<script src="assets/js/scripts.js"></script>
 

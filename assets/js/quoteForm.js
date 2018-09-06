@@ -3,6 +3,19 @@ $(document).ready(function() {
 
   $(hash).addClass("show active");
   $(hash + "-tab-button").addClass("show active");
+
+  var form = document.getElementById("sendMessage");
+
+  form.addEventListener(
+    "submit",
+    function(e) {
+      e.preventDefault();
+
+      alert("Thank You !!");
+      form.reset();
+    },
+    false
+  );
 });
 
 function resQuote() {
