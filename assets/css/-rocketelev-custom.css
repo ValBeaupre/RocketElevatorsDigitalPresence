@@ -1,5 +1,6 @@
 .price {
   text-align: right;
+  border: 3px solid #ccc;
 }
 
 .button-radio {
@@ -8,4 +9,5 @@
 
 .elevators {
   text-align: center;
+  border: 3px solid #ccc;
 }
